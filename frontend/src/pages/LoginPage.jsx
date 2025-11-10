@@ -1,35 +1,25 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // <-- This line is now fixed
 
-function SignupPage() {
-  const [name, setName] = useState('');
+function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { signup } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const success = await signup(name, email, password);
+    const success = await login(email, password);
     if (success) {
       navigate('/');
     }
   };
 
   return (
-    <div className="auth-container"> {/* <-- ADDED CLASS */}
-      <h2>Sign Up</h2>
+    <div className="auth-container">
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
         <div>
           <label>Email:</label>
           <input
@@ -48,10 +38,10 @@ function SignupPage() {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
 }
 
-export default SignupPage;
+export default LoginPage;
