@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log
+yarn-error.log
+
+# Vite
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
