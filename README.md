@@ -37,46 +37,7 @@ This is a complete MERN stack (MongoDB, Express, React, Node.js) project for a f
 ---
 
 ## 📂 Project Structure
-fullstack-auth-app/
-│
-├── backend/
-│   ├── package.json
-│   ├── server.js
-│   ├── .env
-│   ├── config/
-│   │   └── db.js                # Database connection
-│   ├── models/
-│   │   └── User.js              # User schema/model
-│   ├── routes/
-│   │   └── authRoutes.js        # Signup/Login routes
-│   ├── controllers/
-│   │   └── authController.js    # Logic for signup/login
-│   ├── middleware/
-│   │   └── authMiddleware.js    # Verify JWT token
-│   └── utils/
-│       └── generateToken.js     # JWT generation helper
-│
-├── frontend/
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── src/
-│   │   ├── main.jsx
-│   │   ├── App.jsx
-│   │   ├── components/
-│   │   │   └── ProtectedRoute.jsx
-│   │   ├── pages/
-│   │   │   ├── Signup.jsx
-│   │   │   ├── Login.jsx
-│   │   │   └── Home.jsx
-│   │   ├── services/
-│   │   │   └── api.js           # Axios instance
-│   │   └── context/
-│   │       └── AuthContext.jsx  # Manage auth state globally
-│   └── public/
-│       └── index.html
-│
-├── README.md                    # Project overview and setup guide
-└── .gitignore
+fullstack-food-app/ │ ├── backend/ │ ├── config/ │ ├── controllers/ │ ├── middleware/ │ ├── models/ │ ├── routes/ │ ├── utils/ │ ├── .env │ ├── package.json │ └── server.js │ ├── frontend/ │ ├── public/ │ ├── src/ │ │ ├── components/ │ │ ├── context/ │ │ ├── pages/ │ │ └── services/ │ ├── package.json │ └── vite.config.js │ ├── .gitignore └── README.md
 
 ---
 
